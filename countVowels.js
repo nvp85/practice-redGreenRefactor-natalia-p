@@ -4,7 +4,7 @@ function countVowels(str) {
         throw new TypeError("Received input is not a string");
     }
     const vowels = "aeiouAEIOU";
-    return str.split("").filter(char => vowels.includes(char)).length;
+    return [...str].filter(char => vowels.includes(char)).length;
 }
 
 module.exports = countVowels;
